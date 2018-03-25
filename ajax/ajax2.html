@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax2 jsontext</title>
+</head>
+<body>
+    <button id="btn1">user</button>
+
+    <button id="btn2">users</button>
+
+    <h1>USER</h1>
+    <div id="user"></div>
+
+    <h1>USERS</h1>
+    <div id="users"></div>
+
+    <script>
+    document.getElementById('btn1').addEventListener('click',loaduser);
+    function loaduser(){
+
+        var xhr=new XMLHttpRequest();
+        xhr.open('GET','user.json',true);
+        xhr.onload=function(){
+            if(this.status==200){
+                var result=JSON.parse(this.responseText);
+                document.getElementById('user').innerHTML=result.name;
+
+            }
+        }
+
+        xhr.send();
+
+    }
+
+    //2nd userjson
+
+
+    document.getElementById('btn2').addEventListener('click',loadusers);
+    function loadusers(){
+
+        var xhr=new XMLHttpRequest();
+        xhr.open('GET','users.json',true);
+        xhr.onload=function(){
+            if(this.status==200){
+                var output='';
+                var result=JSON.parse(this.responseText);
+                console.log(result);
+// result.map(function(array,index){
+
+//     console.log(array);
+    
+//     output='<ul>'+
+//     '<li>'+array.id+'</li>'+
+//     '<li>'+array.name+'</li>'+
+//     '<li>'+array.email+'</li>'+
+//     '</ul>'
+//     document.getElementById('users').innerHTML+=output;
+
+// })
+for(var i in result){
+    output='<ul>'+
+    '<li>'+result[i].id+'</li>'+
+    '<li>'+result[i].name+'</li>'+
+    '<li>'+result[i].email+'</li>'+
+    '</ul>'
+    document.getElementById('users').innerHTML+=output;
+}
+
+ 
+
+
+                
+               
+
+            }
+        }
+
+        xhr.send();
+
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax4 php</title>
+</head>
+<body>
+    <h1>PHP Through ajax</h1>
+    <button id="btn1">Clicked</button>
+
+
+    <!-- GETFORM AND AJAX -->
+    <h1>GET form</h1>
+    <form  method="GET"action="process.php">
+        <input type="text" name="name"/>
+        <input type="submit" value="SUBMIT">
+       
+    </form> <br> <br>
+    <h1>Ajax GET form</h1>
+    <form id="forminput">
+        <input type="text" name="name" id="name1"/>
+        <input type="submit" value="SUBMIT">
+       
+    </form> <br>
+<!-- END OF GET FORM -->
+    <h1>POST form</h1>
+    <form  method="POST"action="process.php">
+        <input type="text" name="name"/>
+        <input type="submit" value="SUBMIT">
+        </form>
+        <h1>Ajax POST form</h1>
+    <form id="postform">
+        <input type="text" name="name" id="name2"/>
+        <input type="submit" value="SUBMIT">
+
+    <script>
+    //load
+    document.getElementById('btn1').addEventListener('click',loadname);
+    //get
+    document.getElementById('forminput').addEventListener('submit',getname);
+    //post
+    document.getElementById('postform').addEventListener('submit',postname);
+    function loadname(){
+        var xhr=new XMLHttpRequest();
+        xhr.open('GET','process.php?name=bisma',true);
+        xhr.onload=function(){
+            console.log(this.responseText);
+        }
+        xhr.send();
+    }
+
+    function getname(e){
+        e.preventDefault(e);
+        var name=document.getElementById('name1').value;
+        var params="name="+name;
+        var xhr=new XMLHttpRequest();
+        xhr.open('GET','process.php',true);
+        xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+        xhr.onload=function(){
+            
+            console.log(this.responseText);
+        }
+        xhr.send(params);
+    }
+
+
+     function postname(e){
+        e.preventDefault(e);
+        var name=document.getElementById('name2').value;
+        var xhr=new XMLHttpRequest();
+        xhr.open('POST','process.php?name='+name,true);
+        xhr.onload=function(){
+            
+            console.log(this.responseText);
+        }
+        xhr.send();
+    }
+    </script>
+</body>
+</html>

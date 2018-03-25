@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax3 github api</title>
+
+    <style>
+    .user{
+        display:flex;
+        background: #c7c4c4;
+        margin:5px;
+        border-bottom: solid rgb(150, 149, 149);
+    }
+    .user li{
+        list-style: none;
+    }
+    </style>
+</head>
+<body>
+    <button id="btn1">GITHUB</button>
+    <h1>Github users data</h1>
+    <div id="gitusers"></div>
+
+
+    <script>
+
+        document.getElementById('btn1').addEventListener('click',githubusers);
+        function githubusers(){
+            var xhr=new XMLHttpRequest();
+            xhr.open('GET','https://api.github.com/users',true);
+var output='';
+            
+
+            xhr.onload=function(){
+
+if(xhr.status==200){
+    var response=JSON.parse(this.responseText);
+
+                console.log(response);
+
+                for(var i in response){
+                    output+='<div class="user">'+
+                    '<img src="'+response[i].avatar_url+'" width="70" height="70"/>'+
+                    '<ul>'+
+                    '<li>'+response[i].id+'</li>'+
+                    '<li>'+response[i].login+'</li>'+
+                    '<li>'+response[i].avatar_url+'</li>'+
+                    '<li>'+response[i].url+'</li>'+
+                    '</ul>'+
+                    '</div>'
+                    document.getElementById('gitusers').innerHTML=output;
+                }
+
+            }
+
+            }
+            
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
