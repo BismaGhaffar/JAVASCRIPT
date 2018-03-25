@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+  
+    margin:0
+}
+
+.img-container{
+
+
+    /* border:solid red; */
+
+}
+
+#img-box{
+    max-width: 1000px;
+    position: relative;
+    margin:auto;
+    /* border:solid yellow; */
+   
+}
+
+.img-caption{
+position: absolute;
+bottom: 5px;
+
+    color:pink;
+    padding: 20px;
+    display:none;
+  z-index: 1;
+    text-align: center;
+    font-size: 1.6em;
+    
+
+}
+
+
+img{
+    width:100%;
+    height:auto;
+}
+.left, .right{
+    position: absolute;
+ color:#fff;
+top:100px;
+    padding:20px;
+    margin:13px;
+}
+.left:hover, .right:hover{
+    cursor:pointer;
+    background-color: rgb(161, 150, 150);
+    color:#ffff;
+}
+.right{
+    right:0px;
+}
+a{
+    text-decoration: none;
+    font-size: 2.9em;
+    color:#333;
+}
+
+.circles{
+    text-align:center;
+text-align: center;
+margin: auto;
+
+
+    /* border:solid blue; */
+ 
+}
+.round{
+    width:15px;
+    height:15px;
+    border-radius:55%;
+    padding:2px  7px;
+    margin:0px 2px;
+    background-color: #333;
+    
+}
+
+#grey{
+    background-color: rgb(159, 161, 161);
+
+
+}
+
+#black{
+    background-color: rgb(50, 48, 51);
+}
+
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .5} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .5} 
+    to {opacity: 1}
+  }

@@ -1,0 +1,111 @@
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+.img-container{
+    position: relative;
+    border:solid green;
+
+    margin:auto;
+    width:1000px;
+   
+}
+
+.img-content{
+    border:solid orange;
+    display:none;
+    
+}
+
+img{
+    width:100%;
+}
+
+.img-container a.left, a.right{
+
+    position: absolute;
+    top:15%;
+    
+    margin-top:-20px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 4.5em;
+    color: #d4cfcf;
+}
+a.right{
+    right:0px;
+}
+
+#numbers{
+    text-align: left;
+    color:#d4cfcf;
+    position: absolute;
+    left:0px;
+    font-size: 1.5em;
+}
+
+#img-caption{
+    width:100%;
+    position: absolute;
+    bottom: 8px;
+    color:#d4cfcf;
+    text-align: center;
+    font-size: 1.6em;
+    transition: 2s ease;
+}
+
+
+.circles{
+    text-align: center;
+}
+.round{
+  
+height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(226, 41, 41);
+  border-radius: 50%;
+  text-align:center;
+  
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+
+   
+    background-color: #1eaa7b;
+  }
+.round:hover{
+    cursor:pointer;
+    background-color: #af4d4d;
+}
+
+.active:hover{
+    cursor:pointer;
+    background-color: #af4d4d;
+} 
+
+/* animation */
+
+.fade{
+    animation-name:fade;
+    animation-duration: 1.5s;
+    -webkit-animation-name:fade;
+    -webkit-animation-duration: 1.5s;
+
+}
+@keyframes fade{
+    from{opacity:.4}
+    to{opacity:1}
+}
+
+@-webkit-keyframes fade{
+    from{opacity:0.4}
+    to{opacity:1}
+}
+
+
+

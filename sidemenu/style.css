@@ -1,0 +1,141 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+
+
+#container{
+
+    
+    background-color: cornsilk;
+}
+div#sidemenu{
+    border:solid black;
+    height:100%;
+    position:fixed;
+    top:0px;
+    left:0px;
+
+    z-index:1;
+    transition:0.3s;
+    overflow-x: hidden;
+    width:0px;
+}
+#sidemenu a{
+    display:block;
+    text-decoration: none;
+    padding:1em 1em;
+ 
+    color:#333;
+
+    font-size:1em;
+
+}
+
+#sidemenu a#closebtn{
+    font-size: 3em;
+    color:#333;
+    position: absolute;
+    right:0%;
+    top:0%;
+}
+
+#sidemenu a#closebtn:hover{
+    cursor:pointer;
+    color:#5555;
+}
+
+
+nav{
+    border:solid red;
+    width:100%;
+}
+
+nav ul{
+    display:flex;
+    list-style: none;
+}
+nav ul li a{
+    padding:1em 1em;
+    text-decoration: none;
+    color:brown;
+    font-size: 1.1em;
+}
+
+span#menuopen{
+    font-size: 1.7em;
+    color:black;
+
+
+
+}
+
+span#menuopen:hover{
+    color:red;
+    cursor:pointer;
+}
+
+div#tooltipbox{
+    width:100px;
+    height:100px;
+    margin:10% auto;
+    background-color: cornflowerblue;
+
+}
+
+
+div#tooltipbox{
+    width: 120px;
+  
+    background-color: #555;
+    color: rgb(214, 29, 29);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: relative;
+    z-index: 1;
+    top: 15%;
+    left: 50%;
+    margin-left: -30px;
+
+}
+
+div#tooltipbox::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 16px;
+   
+    border-style: solid;
+    border-color: #555;
+
+    border-color: #555 transparent transparent transparent;
+}
+@media(max-width:500px){
+    span#menuopen{
+        display:block;
+    }
+    nav{
+        visibility: hidden;
+    }
+}
+
+@media(min-width:400px){
+    span#menuopen{
+        display:none;
+    }
+
+    nav{
+        visibility: visible;
+    }
+}
