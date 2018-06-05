@@ -1,0 +1,117 @@
+
+var sales_items=[
+    {
+        "stock_id": "1001",
+        "stk_code":"1001",
+        "id": "1",
+        "category_id": "1",
+        "unit_price":"175",
+        "qty_sent":"0",
+        "quantity":"0",
+        "description": "Latte",
+        "discount":"20%",
+        "total":"0",
+        "flag":"flase",
+        "edit":"edit.png",
+        "delete":"delete.png",
+        "cancel":"cancel.png",
+        "ok":"ok.gif"
+    },
+    {
+        "stock_id": "1002",
+        "stk_code":"1002",
+        "id": "2",
+        "category_id": "1",
+        "unit_price":"175",
+        "qty_sent":"0",
+        "quantity":"0",
+        "description": "Cappuccino",
+        "discount":"20%",
+        "total":"0",
+        "flag":"flase",
+        "edit":"edit.png",
+        "delete":"delete.png",
+        "cancel":"cancel.png",
+        "ok":"ok.gif"
+
+    },
+    {
+        "stock_id": "1003",
+        "stk_code":"1003",
+        "id": "3",
+        "category_id": "1",
+        "unit_price":"175",
+        "qty_sent":"0",
+        "quantity":"0",
+        "description": "Mocha",
+        "discount":"20%",
+        "total":"0",
+        "flag":"flase",
+        "edit":"edit.png",
+        "delete":"delete.png"
+
+    },
+    {
+        "stock_id": "1004",
+        "stk_code":"1004",
+        "id": "4",
+        "category_id": "1",
+        "unit_price":"175",
+        "qty_sent":"0",
+        "quantity":"0",
+        "description": "Macchiato",
+        "discount":"20%",
+        "total":"0",
+        "flag":"flase",
+        "edit":"edit.png",
+        "delete":"delete.png"
+
+    },
+    {
+        "stock_id": "1005",
+        "stk_code":"1005",
+        "id": "5",
+        "category_id": "1",
+        "unit_price":"175",
+        "qty_sent":"0",
+        "quantity":"0",
+        "description": "Espresso",
+        "discount":"20%",
+        "total":"0",
+        "flag":"flase",
+        "edit":"edit.png",
+        "delete":"delete.png"
+
+    },
+    {
+        "stock_id": "1006",
+        "stk_code":"1006",
+        "id": "6",
+        "category_id": "1",
+        "unit_price":"175",
+        "qty_sent":"0",
+        "quantity":"0",
+        "description": "Flavors",
+        "discount":"20%",
+        "total":"0",
+        "flag":"flase",
+        "edit":"edit.png",
+        "delete":"delete.png"
+
+    },
+    {
+        "stock_id": "1007",
+        "stk_code":"1007",
+        "id": "7",
+        "category_id": "1",
+        "unit_price":"175",
+        "qty_sent":"0",
+        "quantity":"0",
+        "description": "Iced Latte",
+        "discount":"20%",
+        "total":"0",
+        "flag":"flase",
+        "edit":"edit.png",
+        "delete":"delete.png"
+
+    }];
